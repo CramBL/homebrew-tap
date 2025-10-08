@@ -1,25 +1,25 @@
 class Fidelityfetch < Formula
   desc "Seamlessly setup a webserver to serve files recursively from a specified path"
   homepage "https://github.com/CramBL/fidelityfetch"
-  version "1.2.0"
+  version "1.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/CramBL/fidelityfetch/releases/download/v1.2.0/fidelityfetch-aarch64-apple-darwin.tar.gz"
-      sha256 "e75e9f14081f86900959994077f954462c2f88e48d9979329d13b6970392e10e"
+      url "https://github.com/CramBL/fidelityfetch/releases/download/v1.3.0/fidelityfetch-aarch64-apple-darwin.tar.gz"
+      sha256 "26d121f671538a12ff16d55c3e0d9c22a4e4b060a9d093edcb884bea3d3fb5b5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CramBL/fidelityfetch/releases/download/v1.2.0/fidelityfetch-x86_64-apple-darwin.tar.gz"
-      sha256 "04c2518717eaf118c4e3ff91dbfba7361fa1420e3593e59b9b112f4ace640dec"
+      url "https://github.com/CramBL/fidelityfetch/releases/download/v1.3.0/fidelityfetch-x86_64-apple-darwin.tar.gz"
+      sha256 "57bf42dc4cc380c75b9a55782e3834b94096f7b5a21dab0f3f7c8105ec2d33ad"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/CramBL/fidelityfetch/releases/download/v1.2.0/fidelityfetch-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "7cf4959d2edf5d56372403b52fa62de9a465c81d3556dbea1c25081340472879"
+      url "https://github.com/CramBL/fidelityfetch/releases/download/v1.3.0/fidelityfetch-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "3196950993f6f1141357e2b7bb8bf931c689212a4bf8bd63ea77758ee8a0dff3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CramBL/fidelityfetch/releases/download/v1.2.0/fidelityfetch-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7b2ac627c0273767e686890f0ec4d08f88ea92cd174d8c623312268cdac56faa"
+      url "https://github.com/CramBL/fidelityfetch/releases/download/v1.3.0/fidelityfetch-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "75a816806f38b098e50faee8084b0dcb059ca7c86a518d35a28579950df91907"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
