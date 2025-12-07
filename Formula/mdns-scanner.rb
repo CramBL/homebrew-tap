@@ -1,21 +1,21 @@
 class MdnsScanner < Formula
   desc "Scan a network and create a list of IPs and associated hostnames, including mDNS hostnames and other aliases."
   homepage "https://github.com/CramBL/mdns-scanner"
-  version "0.25.2"
+  version "0.26.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/CramBL/mdns-scanner/releases/download/v0.25.2/mdns-scanner-aarch64-apple-darwin.tar.gz"
+      url "https://github.com/CramBL/mdns-scanner/releases/download/v0.26.0/mdns-scanner-aarch64-apple-darwin.tar.gz"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CramBL/mdns-scanner/releases/download/v0.25.2/mdns-scanner-x86_64-apple-darwin.tar.gz"
+      url "https://github.com/CramBL/mdns-scanner/releases/download/v0.26.0/mdns-scanner-x86_64-apple-darwin.tar.gz"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/CramBL/mdns-scanner/releases/download/v0.25.2/mdns-scanner-aarch64-unknown-linux-musl.tar.gz"
+      url "https://github.com/CramBL/mdns-scanner/releases/download/v0.26.0/mdns-scanner-aarch64-unknown-linux-musl.tar.gz"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CramBL/mdns-scanner/releases/download/v0.25.2/mdns-scanner-x86_64-unknown-linux-musl.tar.gz"
+      url "https://github.com/CramBL/mdns-scanner/releases/download/v0.26.0/mdns-scanner-x86_64-unknown-linux-musl.tar.gz"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
