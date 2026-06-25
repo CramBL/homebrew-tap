@@ -7,22 +7,22 @@ class GeotraceC < Formula
   on_macos do
     on_arm do
       url "https://github.com/CramBL/geotrace/releases/download/geotrace-sdk-v0.3.0/geotrace-sdk-aarch64-apple-darwin.tar.gz"
-      sha256 "7b8a755a564bb46ea9c7538d255528ebd98b19a3e0e2299f6b4ad052a1c8e217"
+      sha256 "4d0d330e08816caf08bed3cd3e2a20c636ab32d34f9f4a7ef4468c5f1ba748e5"
     end
     on_intel do
       url "https://github.com/CramBL/geotrace/releases/download/geotrace-sdk-v0.3.0/geotrace-sdk-x86_64-apple-darwin.tar.gz"
-      sha256 "ded1bf75dc52a2b04bcfd9767e77007a675cd73f8fa9f05a5d165f55c0b15677"
+      sha256 "a967291f780fdffc136eccfc8687c7d40fca098fe03e49e1aef08758c0f05981"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/CramBL/geotrace/releases/download/geotrace-sdk-v0.3.0/geotrace-sdk-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "064d3bcfdb97b8d79265000bc37d43e7176c76c25f131e101768ebeb02e15ed3"
+      sha256 "06e4cdf8e2398b464e3fa9cc947103a909b950718760a27270518519b28ab232"
     end
     on_intel do
       url "https://github.com/CramBL/geotrace/releases/download/geotrace-sdk-v0.3.0/geotrace-sdk-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "f4377c41168f7484332cbae342b3523aad432926552a8b280800e59a9f276c6f"
+      sha256 "5a1fdaff66f2d3f3629799805fb2c6e49ed0cdc50c4c86c16cd3e172619f693e"
     end
   end
 
