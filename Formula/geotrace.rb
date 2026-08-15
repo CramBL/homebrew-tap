@@ -1,25 +1,25 @@
 class Geotrace < Formula
   desc "High-performance GNSS data visualizer, with advanced debugging and anomaly detection capabitilies"
   homepage "https://github.com/CramBL/geotrace"
-  version "0.11.0"
+  version "0.12.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/CramBL/geotrace/releases/download/app/v0.11.0/geotrace-aarch64-apple-darwin.tar.gz"
-      sha256 "8bbfd34a4aad3f8d96b985dd1af83691c4af8995970abcd83f1cf0c53fcfff15"
+      url "https://github.com/CramBL/geotrace/releases/download/app/v0.12.0/geotrace-aarch64-apple-darwin.tar.gz"
+      sha256 "1e6bfb45ce9afb48531f340eadab25958bf631d01fe02054195f324b0c58d62e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CramBL/geotrace/releases/download/app/v0.11.0/geotrace-x86_64-apple-darwin.tar.gz"
-      sha256 "935369ff7c944c3f681223ebb012e3b5bc2a673755bbd5f10ead31aab3a78cad"
+      url "https://github.com/CramBL/geotrace/releases/download/app/v0.12.0/geotrace-x86_64-apple-darwin.tar.gz"
+      sha256 "a85a00108543d0571630d4bb237d74493dc7bd1b9f2ae8b2db0e8aad5eea85ea"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/CramBL/geotrace/releases/download/app/v0.11.0/geotrace-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "fe70782a1198f57cb7d18bda10caba750dec2d3f9d8a4b50cb3a317142266982"
+      url "https://github.com/CramBL/geotrace/releases/download/app/v0.12.0/geotrace-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "2fab131c3abbcfea62d8c53b599aa1c7d4ee36ee60b8809f3809ec93761dc240"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CramBL/geotrace/releases/download/app/v0.11.0/geotrace-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b2f3917988369919f4dba1a5e393a48843d338859dc166401b5ee11fa722b032"
+      url "https://github.com/CramBL/geotrace/releases/download/app/v0.12.0/geotrace-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "320cb4136bc38c1f1dc9204515ff2fe536a1ab7121cca956e922a78881ba5848"
     end
   end
   license "AGPL-3.0-only"
@@ -48,10 +48,18 @@ class Geotrace < Formula
   end
 
   def install
-    bin.install "geotrace" if OS.mac? && Hardware::CPU.arm?
-    bin.install "geotrace" if OS.mac? && Hardware::CPU.intel?
-    bin.install "geotrace" if OS.linux? && Hardware::CPU.arm?
-    bin.install "geotrace" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "geotrace"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "geotrace"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "geotrace"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "geotrace"
+    end
 
     install_binary_aliases!
 
