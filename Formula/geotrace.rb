@@ -1,25 +1,25 @@
 class Geotrace < Formula
   desc "High-performance GNSS data visualizer, with advanced debugging and anomaly detection capabitilies"
   homepage "https://github.com/CramBL/geotrace"
-  version "0.18.0"
+  version "0.19.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/CramBL/geotrace/releases/download/app/v0.18.0/geotrace-aarch64-apple-darwin.tar.gz"
-      sha256 "a4bcf8f0d4d686b68d7683938e8e4dc7ddaef51d514b031426d65d517ec1f975"
+      url "https://github.com/CramBL/geotrace/releases/download/app/v0.19.0/geotrace-aarch64-apple-darwin.tar.gz"
+      sha256 "ec0fb2be518175b88e0ea0bd4c2b7d196ac22efac986d22aa93e8271917268c0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CramBL/geotrace/releases/download/app/v0.18.0/geotrace-x86_64-apple-darwin.tar.gz"
-      sha256 "0a2de0bed85ae649c7db09f63b04bef9dee729e3c7d6311db9be63b22404117b"
+      url "https://github.com/CramBL/geotrace/releases/download/app/v0.19.0/geotrace-x86_64-apple-darwin.tar.gz"
+      sha256 "89352b63f932cca401f745bff997f6852de5ee93941c2445eeb5bfc56329c363"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/CramBL/geotrace/releases/download/app/v0.18.0/geotrace-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "503f3cf6ef3724b42232f2e08c0e616b4b9c56cf3c627332d3774101d86c089f"
+      url "https://github.com/CramBL/geotrace/releases/download/app/v0.19.0/geotrace-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "bdda9b0795973ecf40acd07904cf92ba2c53d260db08121594690d7b0a50d9c7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CramBL/geotrace/releases/download/app/v0.18.0/geotrace-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7d406e8c302a2570c4764adddfe07853a169ac1b285badb04cf9cb2f0df14075"
+      url "https://github.com/CramBL/geotrace/releases/download/app/v0.19.0/geotrace-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "0e78b0ae1d7cff2593e3a4c68a0a38fa5388c2f3ccbf3d590a4c0880c966e024"
     end
   end
   license "AGPL-3.0-only"
