@@ -1,25 +1,25 @@
 class Asleep < Formula
   desc "An advanced suspend-aware sleep utility with live countdown and flexible datetime parsing"
   homepage "https://github.com/CramBL/asleep"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/CramBL/asleep/releases/download/v0.1.0/asleep-aarch64-apple-darwin.tar.xz"
-      sha256 "afb9a0ea16577f5e4ecb45659cbec0760b58670a3049edca56822d040d3dcf06"
+      url "https://github.com/CramBL/asleep/releases/download/v0.1.1/asleep-aarch64-apple-darwin.tar.xz"
+      sha256 "3c36978f4c78a4d77c263592edf354e28b44ede7f6657f251803d7999cba613e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CramBL/asleep/releases/download/v0.1.0/asleep-x86_64-apple-darwin.tar.xz"
-      sha256 "e3a7c5be0fa40ad962fdce355c071fe360c142cd6ce01842005412cff32ba428"
+      url "https://github.com/CramBL/asleep/releases/download/v0.1.1/asleep-x86_64-apple-darwin.tar.xz"
+      sha256 "7747c29c1a5e2d22c0e3473cb4b5edf2e04a3e921d9b078b506cde80af7f1a3d"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/CramBL/asleep/releases/download/v0.1.0/asleep-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "284795bfeb985939aebbd62da6c374d8f73ff49dd00753966816cb36317d4a75"
+      url "https://github.com/CramBL/asleep/releases/download/v0.1.1/asleep-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "216baf37643298cce89c8bcf67bc1843a863c630620ada4fc49257833a90bc6f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/CramBL/asleep/releases/download/v0.1.0/asleep-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "fb2c23d9e6fc62ab9133ea6f6ceecba2f6984b2f8f5554b571356047a91e97a2"
+      url "https://github.com/CramBL/asleep/releases/download/v0.1.1/asleep-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "b20a56a11bd112fb890436c4e19dd4d17318a09f0ad11531c95a2d08fea7b3f8"
     end
   end
   license "GPL-3.0-or-later"
@@ -50,10 +50,18 @@ class Asleep < Formula
   end
 
   def install
-    bin.install "asleep" if OS.mac? && Hardware::CPU.arm?
-    bin.install "asleep" if OS.mac? && Hardware::CPU.intel?
-    bin.install "asleep" if OS.linux? && Hardware::CPU.arm?
-    bin.install "asleep" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "asleep"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "asleep"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "asleep"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "asleep"
+    end
 
     install_binary_aliases!
 
